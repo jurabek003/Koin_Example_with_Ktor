@@ -13,7 +13,13 @@ class MyApp:Application() {
         super.onCreate()
         startKoin {
             androidContext(this@MyApp)
-            modules(listOf(networkModule, repositoryModule, viewModelModule)) // viewModelModule ni qo'shish
+            modules(
+                listOf(
+                    networkModule,
+                    repositoryModule,
+                    viewModelModule
+                )
+            )
         }
     }
 }

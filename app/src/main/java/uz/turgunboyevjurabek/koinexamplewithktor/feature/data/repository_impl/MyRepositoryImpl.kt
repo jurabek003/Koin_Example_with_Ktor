@@ -7,6 +7,7 @@ import uz.turgunboyevjurabek.koinexamplewithktor.feature.domein.madels.today.Tim
 import uz.turgunboyevjurabek.koinexamplewithktor.feature.domein.repository.MyRepository
 
 class MyRepositoryImpl(private val apiService: ApiService):MyRepository {
+    
     override suspend fun getTodayTime(region: String): TimeOfToday {
         return apiService.getTodayTime(region)
     }
